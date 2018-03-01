@@ -10,6 +10,11 @@ Telegram utils
 
     See tg/README.md to compile telegram-cli
 
+    *If you got compilation error for tgl/crypto/rsa_pem_openssl.c, you can try to fix by
+      $ cd tgl
+      $ git apply ../../tg-tgl-hot-fix.patch
+      $ cd ../
+
     Run tg/bin/telegram-cli -I -W --json
     - Login to your account
     - Use command 'channel_info <Tab>' to find telegram channel-id (long hex-number starting with $)
