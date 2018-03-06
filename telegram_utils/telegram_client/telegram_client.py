@@ -46,7 +46,7 @@ class TelegramClient:
         self._ensure_start()
         if self._verbose:
             sys.stderr.write(request + '\n')
-        self._socket.send(str.encode(request + '\n'))
+        self._socket.send((request + '\n').encode())
         self._socket.settimeout(2.0)
         try:
             response = self._socket.recv(60000)
